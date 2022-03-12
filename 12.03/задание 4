@@ -1,0 +1,20 @@
+def setup():
+    size(600, 400)
+    global x
+    global y
+    global x2
+    global y2
+    x = 0
+    y = 0
+    x2 = width / 2
+    y2 = height / 2
+def draw():
+    global x
+    global y
+    global x2
+    global y2
+    background(100)
+    fill(floor(random(0,255)) , floor(random(0,255)), floor(random(0,255)))
+    line(x, y, x2,y2)
+    x = x + 3
+    y = y + 2

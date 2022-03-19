@@ -1,0 +1,18 @@
+def setup():
+    size(600, 400)
+    colorMode(HSB)
+    global x
+    global y
+    global z
+    x = 0
+    y = 2
+    z = 2
+def draw():
+    global x
+    global y
+    global z
+    fill(x,y,z)
+    ellipse(300,200,70,70)
+    x = x + 1
+    y = y + 1
+    z = z + 1

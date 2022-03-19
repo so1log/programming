@@ -1,0 +1,12 @@
+def setup():
+    size(600, 400)
+    colorMode(HSB)
+def draw():
+    global rot
+    translate(width/2, height/2)
+    fill(100, 100, 100)
+    rotate(radians(45))
+    ellipse(0, -15, 30, 60)
+    rotate(radians(-90))
+    ellipse(0, -15, 30, 60)
+    rect(-15,0,30,15)

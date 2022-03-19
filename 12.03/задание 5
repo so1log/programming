@@ -1,0 +1,30 @@
+def setup():
+    size(600, 400)
+    global x
+    global y
+    global z
+    global e
+    global q
+    global f
+    x = 300
+    y = 270
+    z = 330
+    e = 200
+    q = 230
+    f = 230
+def draw():
+    global x
+    global y
+    global z
+    global e
+    global q
+    global f
+    background(0)
+    fill(x,y,z)
+    triangle(x,e,y,q,z,f)
+    x = x + 1
+    y = y + 1
+    z = z + 1
+    e = e + 1
+    q = q + 1
+    f = f + 1

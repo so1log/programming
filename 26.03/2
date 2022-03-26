@@ -1,0 +1,12 @@
+x=0
+def setup():
+    size(600,400)
+    frameRate(5)
+def draw():
+    global x
+    strokeWeight(5)
+    stroke(floor(random(0,255)),floor(random(0,255)), floor(random(0,255)))
+    translate(width/2,height/2)
+    rotate(radians(x))
+    line(0,0,150,100)
+    x=x+30

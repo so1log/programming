@@ -1,0 +1,11 @@
+x=600
+def setup():
+    size(600,400)
+def draw():
+    global x
+    background(100)
+    #translate(300,200)
+    ellipse(x,50,30,40)
+    x=x-2
+    if x < 0:
+        noLoop()

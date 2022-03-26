@@ -1,0 +1,28 @@
+x = 0
+y = 0
+z=0
+def setup():
+    size(600, 400)
+    frameRate(5)
+    push()
+    translate(300,200)
+    line(0,30,0,120)
+    pop()
+def draw():
+    global x
+    global y
+    global z
+    translate(300,200)
+    push()
+    pop()
+    #background(100)
+    push()
+    rotate(radians(x))
+    fill(0,255,0)
+    ellipse(0,40,20,50)
+    pop()
+    fill(255,255,0)
+    ellipse(0,0,40,40)
+    x= x+30
+    y=y+5
+    z=z+5

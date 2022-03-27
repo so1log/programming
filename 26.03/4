@@ -1,0 +1,27 @@
+regim="right"
+mode="up"
+x=0
+y=0
+def setup():
+    size(600,400)
+def draw():
+    global regim
+    global x,y,mode
+    background(100)
+    ellipse(x,y,30,40)
+    if regim == "right":
+        x=x+3
+    if regim == "left":
+        x=x-3
+    if x > 600:
+        regim = "left"
+    if x < 0:
+        regim = "right"
+    if mode == "up":
+        y=y-3
+    if mode == "down":
+        y=y+3
+    if y>400:
+        mode="up"
+    if y<0:
+        mode="down"

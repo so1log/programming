@@ -1,0 +1,40 @@
+u=0
+x=0
+y=0
+z=0
+def setup():
+    size(600,400)
+    frameRate(200)
+def draw():
+    global regim
+    global x,y,mode,razmer,z,u
+    background(100)
+    fill(floor(random(0,255)),floor(random(0,255)), floor(random(0,255)))
+    ellipse(x,y,z,z)
+    if regim == "right":
+        x=x+2
+    if regim == "left":
+        x=x-2
+    if x > 600:
+        regim = "left"
+    if x < 0:
+        regim = "right"
+    if mode == "up":
+        y=y-2
+    if mode == "down":
+        y=y+2
+    if y>400:
+        mode="up"
+    if y<0:
+        mode="down"
+    if razmer == "big":
+        z=z+1
+    if razmer == "small":
+        z=z-1
+    if z>100:
+        razmer="small"
+    if z<25:
+        razmer="big"
+    u=u+1
+    if u>2000:
+        noLoop()

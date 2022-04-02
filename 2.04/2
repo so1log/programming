@@ -1,0 +1,22 @@
+def setup():
+    size(600,400)
+    frameRate(1)
+def draw():
+    if mousePressed==False:
+        #fill(45,245,89)
+        #ellipse(floor(random(width)),floor(random(height)),floor(random(40)),floor(random(40)))
+        if mouseButton==LEFT:
+            fill(100,100,100)
+        elif mouseButton==CENTER:
+            fill(50,50,200)
+        elif mouseButton==RIGHT:
+            fill(89,40,43)
+        else:
+            fill(45,245,89)
+        ellipse(floor(random(width)),floor(random(height)),floor(random(40)),floor(random(40)))     
+    else:
+        background(0)
+    #if mouseButton==LEFT:
+       # fill(100,100,100)
+        #ellipse(floor(random(width)),floor(random(height)),floor(random(40)),floor(random(40)))
+        

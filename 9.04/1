@@ -1,0 +1,14 @@
+def setup():
+    size(600,400)
+def draw():
+    ellipse(300,200,50,50)
+    if mousePressed==True:
+        # ellipse(300,200)
+        if mouseButton==LEFT:
+            fill(255,0,0)
+        elif mouseButton==CENTER:
+            fill(255,255,0)
+        elif mouseButton==RIGHT:
+            fill(0,255,0)
+    else:
+        fill(255,255,255)

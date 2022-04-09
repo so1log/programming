@@ -1,0 +1,15 @@
+regim="right"
+x=0
+y=200
+def setup():
+    size(600,400)
+def draw():
+    global regim,x,y
+    ellipse(x,y,30,40)
+    # background(100)
+    fill(0,255,0)
+    if mousePressed==True:
+        if mouseButton==LEFT:
+            x=x+3
+        if mouseButton==RIGHT:
+            x=x-3

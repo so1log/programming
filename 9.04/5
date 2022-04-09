@@ -1,0 +1,13 @@
+def setup():
+    size(600,400)
+def draw():
+    if mousePressed==True:
+        line(pmouseX, pmouseY,mouseX,mouseY)
+    else:
+        background(255)
+    rect(400,300,70,50)
+def mouseClicked():
+    if mouseX>400 and mouseX<470 and mouseY>300 and mouseY<350:
+        stroke(floor(random(0,255)),floor(random(0,255)),floor(random(0,255)))
+        strokeWeight(floor(random(0,20)))
+        

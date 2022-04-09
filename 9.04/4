@@ -1,0 +1,20 @@
+x=255
+z=255
+y=255
+def setup():
+    size(600,400)
+    textSize(50)
+def draw():
+    fill(x,z,y)
+    rect(40,60,60,40)
+    push()
+    fill(241,33,91)
+    text("a", 57,95)
+    pop()
+def mouseClicked():
+    global y,z,x
+    if mouseX>40 and mouseX<100 and mouseY>60 and mouseY<100:
+        x = floor(random(0,255))
+        y = floor(random(0,255))
+        z = floor(random(0,255))
+        # fill(floor(random(0,255)),floor(random(0,255)),floor(random(0,255)))

@@ -1,0 +1,37 @@
+x=300
+y=200
+g=0
+def setup():
+    frameRate(10000)
+    size(600,400)
+def draw():
+    global x,y,g
+    background(100)
+    rect(300,300,25,25)
+    rect(250,300,25,25)
+    rect(275,270,25,25)
+    rect(275,330,25,25)
+    push()
+    noFill()
+    rect(400,300,70,50)
+    pop()
+    fill(150,150,150)
+    ellipse(x,y,35,35)
+    textSize(30)
+    text(g,425,335)
+def mouseClicked():
+    global x,y,g
+    if mouseX>300 and mouseX<325 and mouseY>300 and mouseY<325:
+        x=x+10
+        g=g+1
+    if mouseX>250 and mouseX<275 and mouseY>300 and mouseY<325:
+        x=x-10
+        g=g+1
+    if mouseX>275 and mouseX<300 and mouseY>270 and mouseY<295:
+        y=y-10
+        g=g+1
+    if mouseX>275 and mouseX<300 and mouseY>300 and mouseY<355:
+        y=y+10
+        g=g+1
+    if mouseX>400 and mouseX<470 and mouseY>300 and mouseY<350:
+        pass

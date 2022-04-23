@@ -1,0 +1,4 @@
+def keyPressed():
+    global x
+    if key == "x" or key=="X" or key == u"ч" or key == u"Ч": 
+        x=x+10

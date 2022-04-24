@@ -1,0 +1,14 @@
+x=10
+y=10
+def setup():
+    size(600,400)
+def draw():
+    global x,y
+    background(100)
+    ellipse(300,200,x,x)
+def keyPressed():
+    global x,y
+    if key == "x":
+        x=x+2
+    if key== "c":
+        x=x-2

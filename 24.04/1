@@ -1,0 +1,6 @@
+def setup():
+    size(600,400)
+def draw():
+    background(100)
+    textSize(40)
+    text(key,300,200)

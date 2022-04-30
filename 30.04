@@ -1,0 +1,47 @@
+x=0
+y=0
+z=0
+stop=600
+h=x+150
+regim="right"
+mode="down"
+def setup():
+    size(600,400)
+def draw():
+    global x,regim,mode,y,z,stop
+    background(100)
+    rect(x,380,150,20)
+    ellipse(z,y,50,50)
+    if regim == "right":
+        z=z+5
+    if regim == "left":
+        z=z-5
+    if z > 600:
+        regim = "left"
+    if z < 0:
+        regim = "right"
+    if mode == "up":
+        y=y-2
+    if mode == "down":
+        y=y+2
+    if y>360:
+        if z>x and z<h and y<380:
+            mode="up"
+    if y<0:
+        mode="down"
+    stop=stop-1
+    if stop<0:
+        background(100)
+        textSize(50)
+        text(u"Конец", 250,250)
+def keyPressed():
+    global x,y,h
+    if keyCode==RIGHT:
+        h=h+20
+        x=x+20
+    if keyCode==LEFT:
+        h=h-20
+        x=x-20
+    
+        
+        

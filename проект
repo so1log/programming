@@ -1,0 +1,50 @@
+x=0
+y=0
+z=0
+h=x+150
+score=0
+regim="right"
+mode="down"
+def setup():
+    size(600,400)
+def draw():
+    global x,regim,mode,y,z,score
+    background(50)
+    textSize(25)
+    text(score,550,350)
+    rect(x,380,150,20)
+    fill(255,255,0)
+    ellipse(z,y,50,50)
+    if regim == "right":
+        z=z+5
+    if regim == "left":
+        z=z-5
+    if z > 575:
+        regim = "left"
+    if z < 25:
+        regim = "right"
+    if mode == "up":
+        y=y-2
+    if mode == "down":
+        y=y+2
+    if y>360:
+        if z>x and z<h and y<380:
+            mode="up"
+            score=score+1
+            # textSize(25)
+            # text(score,550,350)
+    if y<0:
+        mode="down"
+    if y>430:
+        background(50)
+        textSize(50)
+        fill(255,0,0)
+        text("Game over", 175,225)
+def keyPressed():
+    global x,y,h
+    if keyCode==RIGHT:
+        h=h+20
+        x=x+20
+    if keyCode==LEFT:
+        h=h-20
+        x=x-20
